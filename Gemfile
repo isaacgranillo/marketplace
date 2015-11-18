@@ -29,6 +29,7 @@ gem "paperclip", "~> 4.3"
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem 'devise'
+gem 'hirb'
 
 
 
