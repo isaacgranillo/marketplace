@@ -58,6 +58,11 @@ body {
 	margin: 0px;
 }
 
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #ccffcc;
+ }
+
 
 
 
