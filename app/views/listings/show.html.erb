@@ -8,7 +8,12 @@
 		<h3><%= @listing.name %></h3>
 		<h4><%= number_to_currency(@listing.price) %></h4>
 		<p><%= @listing.description %></p>
-		<%= link_to "Buy Now!", new_listing_order_path(@listing), class: "btn btn-success" %>
+
+		<% if current_user != @listing.user %>
+			<%= link_to "Buy Now!", new_listing_order_path(@listing), class: "btn btn-success" %>
+		<% else %>
+			<h4><i> I am selling this item. </i></h4>
+		<% end %>
 	</div>
 </div>
 
