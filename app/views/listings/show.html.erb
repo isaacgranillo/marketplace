@@ -10,9 +10,9 @@
 		<p><%= @listing.description %></p>
 
 		<% if current_user != @listing.user %>
-			<%= link_to "Buy Now!", new_listing_order_path(@listing), class: "btn btn-success" %>
+			<%= link_to "Buy Now!", new_listing_order_path(@listing), class: "btn btn-success", data: {no_turbolink: true } %>
 		<% else %>
-			<h4><i> I am selling this item. </i></h4>
+			<h4><i> I am selling this item </i></h4>
 		<% end %>
 	</div>
 </div>
