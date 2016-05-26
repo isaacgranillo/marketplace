@@ -22,4 +22,13 @@
 <% if current_user == @listing.user %>
 	<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> |
 <% end %>
+
+<% if @reviews.blank? %>
+	<h3>No Reviews Yet</h3>
+<% else %>
+	<% @reviews.each do |review| %>
+		<p><%= review.rating %></p>
+		<p><%= review.comment %></p>
+	<% end %>
+<% end %>
 <%= link_to 'Home', root_path, class: "btn btn-link" %>
